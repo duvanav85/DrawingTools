@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\DrawingRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\Draw;
+
 
 /**
  * @ORM\Entity(repositoryClass=DrawingRepository::class)
@@ -38,4 +40,11 @@ class Drawing
 
         return $this;
     }
+
+    public function draw()
+    {
+        $draw = new Draw();
+        $draw->consoleListener();
+    }
+    
 }

@@ -40,11 +40,4 @@ class Drawing
 
         return $this;
     }
-
-    public function draw()
-    {
-        $draw = new Draw();
-        $draw->consoleListener();
-    }
-    
 }

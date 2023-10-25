@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Drawing;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+include('draw.class.php');
 
 /**
  * @extends ServiceEntityRepository<Drawing>
@@ -39,5 +40,10 @@ class DrawingRepository extends ServiceEntityRepository
         }
     }
 
+    public function draw(): void
+    {
+        $draw = new Draw();
+        $draw->consoleListener();
+    }
     
 }
